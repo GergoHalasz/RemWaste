@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Box,
   Grid,
   Typography,
   Button,
   CircularProgress,
-  Card,
-  CardContent,
-  CardActions,
-  Chip,
 } from "@mui/material";
 import { SkipSizeCard } from "./SkipSizeCard/SkipSizeCard";
 
