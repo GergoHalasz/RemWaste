@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# Skip Size Selector - React + MUI + Framer Motion  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview  
+This project is a **skip size selection UI** built using **React**, **Material-UI (MUI)**, and **Framer Motion** for animations. The interface allows users to select a skip based on its size, hire period, and price while handling conditions like heavy waste restrictions and on-road permissions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack  
+- **React**: Component-based architecture for building UI  
+- **Material-UI (MUI)**: Provides a clean and customizable design  
+- **Framer Motion**: Adds smooth animations for a better user experience  
+- **TypeScript**: Ensures type safety and improves maintainability  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎨 UI Design Approach  
+- **MUI Box & Card Components**: Used for structuring the UI with consistent styling  
+- **Framer Motion**: Smooth fade-in effects when components load  
+- **Conditional Styling**:  
+  - Skips that don't allow heavy waste are **grayed out** and **unclickable**  
+  - Private property-only skips show a **warning badge**  
+  - Selected skips have a **highlighted effect** with a **glow shadow**  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Component Breakdown  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1️⃣ `SkipSizeCard.tsx`  
+- Displays **skip size, hire period, and price**  
+- Uses **MUI Card** with hover and selection effects  
+- Handles **conditional rendering** for restricted skips  
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 2️⃣ `SkipBadge.tsx`  
+- Displays **warnings** (e.g., "Not Suitable for Heavy Waste")  
+- Uses **MUI Box** with icons from `@mui/icons-material`  
+
+### 3️⃣ `SkipPrice.tsx`  
+- Formats and **calculates the total price** with VAT  
+- Ensures correct rounding  
+
+### 4️⃣ `SelectButton.tsx`  
+- Custom **MUI Button**  
+- Disables selection for **restricted skips**  
+- Uses `textTransform: "capitalize"` to ensure button text formatting  
+
+---
+
+## 🚀 Key Features  
+✅ **Responsive Design** (MUI grid & flexbox)  
+✅ **Hover & Selection Effects** (Framer Motion animations)  
+✅ **Dynamic Button States** (Disabled for restricted skips)  
+✅ **Scalable Component-Based Architecture**  
+
+### ✨ Developed by [Gergo Halasz]  
