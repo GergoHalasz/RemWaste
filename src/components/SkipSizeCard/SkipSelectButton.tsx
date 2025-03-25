@@ -16,17 +16,17 @@ export const SkipSelectButton: React.FC<SkipSizeCardProps> = ({
       padding: "10px",
       backgroundColor: selected ? "#003366" : "#004080",
       cursor: !skip.allows_heavy_waste || !skip.allowed_on_road ? "not-allowed" : "pointer",
-      textTransform: "capitalize", // Ensures only the first letter is uppercase
-      boxShadow: "none", // Removes the border effect on click
+      textTransform: "capitalize", 
+      boxShadow: "none", 
       "&:hover": {
         backgroundColor: selected ? "#002244" : "#002E5D",
-        boxShadow: "none", // Prevents shadow on hover
+        boxShadow: "none", 
       },
       "&:active": {
-        boxShadow: "none", // Removes border effect on click
+        boxShadow: "none",
       },
       "&:focus": {
-        outline: "none", // Removes focus outline
+        outline: "none",
       },
     }}
     disableRipple
